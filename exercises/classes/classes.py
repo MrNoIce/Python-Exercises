@@ -44,22 +44,24 @@ class Pizza:
     def __init__(self):
         self.size = 0
         self.type = ""
-        self.toppings = ""
+        self.toppings = []
         self.ordered = False
 
     def add_topping(self,toppings):
-        self.toppings = toppings
+        self.toppings.append(toppings)
 
     def order_zah(self):
+        sep = " and "
         self.ordered = True
-        print(f"You ordered a {self.size} inch {self.type} pizza, with {self.toppings}")
+        list_toppings = sep.join(self.toppings)
+        print(f"You ordered a {self.size} inch {self.type} pizza, with {list_toppings}")
 
 pepperoni = Pizza()
 pepperoni.size = 73
 pepperoni.type = "Meat"
-pepperoni.toppings = ("sausage", "pepperoni")
-pepperoni.add_topping("onion",)
-pepperoni.add_topping("olives",)
+pepperoni.add_topping("sausage")
+pepperoni.add_topping("onion")
+pepperoni.add_topping("olives")
 pepperoni.order_zah()
 
 for prop, value in pepperoni.__dict__.items():
