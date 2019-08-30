@@ -39,20 +39,34 @@ for names in sliding_kids:
     slide(names)
 for names in hiding_kids:
     hide(names)
+def chickenMonkey_mine():
+    for num in range(1,101):
+        if num % 5 == 0 and num % 7 == 0:
+            print(f"Chicken Monkey")
 
-for num in range(1,101):
-    if num % 5 == 0:
-        print(f"{num} chicken")
+        elif num % 5 == 0:
+            print(f"chicken")
 
-    elif num % 5 == 0 & num % 7 == 0:
-        print(f"{num} Chicken Monkey")
+        elif num % 7 == 0:
+            print(f"monkey")
 
-    elif num % 7 == 0:
-        print(f"{num} monkey")
-
-    else:
-        print(num)
+        else:
+            print(num)
+chickenMonkey_mine()
 
 # def multiples(m, count):
 #     for i in range(count):
 #         print(i*m)
+
+def chicken_monkey_run():
+    range_to_100 = range(1, 100)
+    for num in range_to_100:
+        if num % 5 == 0 and num % 7 == 0:
+            print("chickenMonkey")
+        elif num % 5 == 0:
+            print("Chicken")
+        elif num % 7 == 0:
+            print("Monkey")
+        else:
+            print(num)
+chicken_monkey_run()

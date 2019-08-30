@@ -25,8 +25,27 @@ ninteeth_time.purchase("Susan Simpson")
 seventeeth_wow.purchase("Susan Simpson")
 
 
+def funct(time, str="I have visited the city of"):
+    for i in time:
+        print(f"{str} {i}")
+
+funct(["Nashville", "Texasis"])
 
 
+
+
+
+
+
+
+# Write a function that takes a list and a string as args.
+# The string parameter should have a default value.
+# In the function body, loop over the list and print the items, each one prefaced by the value of the string argument
+# One example output might then be "I have visited the city of San Francisco"
+# if "San Francisco" was an item in the list, and the string argument was
+# "I have visited the city of "
+# Try it out! Execute the function both with and without passing in a
+# value for the string parameter
 
 
 

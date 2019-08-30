@@ -16,3 +16,16 @@ for key,values in idioms.items():
     print(key,":",space.join(values))
 
 #print("Idioms", idioms)
+
+my_family = {
+    "sister": {
+        "name": "Krista",
+        "age": 42
+    },
+    "mother": {
+        "name": "Cathie",
+        "age": 70
+    }
+}
+for family_member, details in my_family.items():
+    print(f'{details["name"]} is my {family_member} and is {str(details["age"])} years old')

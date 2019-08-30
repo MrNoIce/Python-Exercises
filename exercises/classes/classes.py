@@ -1,3 +1,6 @@
+import datetime
+
+
 class Book:
 
     def __init__(self):
@@ -67,3 +70,81 @@ pepperoni.order_zah()
 for prop, value in pepperoni.__dict__.items():
     print("Pizza:",f'{prop}:\n{value}\n')
 
+class Animal:
+    def __init__(self, leg_num, species, owner="Happy Acres Breeding"):
+        self.owner = owner
+        self.species = species
+        self.leg_num = leg_num
+
+    def set_solid_food_date(self):
+        self.set_solid_food_date = datetime.datetime.now().strftime("%x")
+
+    def move(self, speed):
+        return(f"{self.species} moves at {speed} meeters per second")
+
+class Dog(Animal):
+    def __init__(self, breed):
+        self.breed = breed
+        super().__init__(3, "dog")
+
+collie = Dog("collie")
+print(collie)
+collie.set_solid_food_date()
+
+
+
+class Vehicle:
+    def __init__(self, main_color, maximum_occupancy):
+        self.main_color = main_color
+        self.maximum_occupancy = maximum_occupancy
+    def drive(self):
+        print("Vroooom!")
+
+
+# Electric motorcycle
+class Zero(Vehicle):
+    def __init__(self):
+        self.battery_kwh = 0
+
+    def charge_battery(self):
+        print("Battery Charged")
+# Propellor light aircraft
+class Cessna(Vehicle):
+    def __init__(self):
+        self.fuel_capacity = 0
+
+
+    def refuel_tank(self):
+        print("tank full")
+
+# Gas powered truck
+class Ram(Vehicle):
+    def __init__(self, fuel_capacity):
+        self.fuel_capacity = fuel_capacity
+        super().__init__("Green", 45)
+
+    def refuel_tank(self):
+        print("tank full")
+
+# Electric vehicle
+class Tesla(Vehicle):
+    def __init__(self, battery_kwh):
+        self.battery_kwh = battery_kwh
+        super().__init__("Blue", 2)
+    def charge_battery(self):
+        self.battery_kwh = 100
+    def drive(self):
+        print("Zoooooooooooom!")
+
+vehicle = Tesla(100)
+print(vehicle)
+vehicle.drive()
+vehicle = Ram(200)
+
+fxs = Zero()
+modelS = Tesla(100)
+mx410 = Cessna()
+
+fxs.drive()
+modelS.drive()
+mx410.drive()
