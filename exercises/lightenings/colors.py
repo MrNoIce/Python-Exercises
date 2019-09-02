@@ -113,5 +113,11 @@ for color_dict in eye_colors:
 print(color_table)
 
 
+Appliances = ("oven", "refrigerator", "coffee maker", "rice cooker")
+# Add 3 indispensable appliances to this tuple
+Appliances = (*Appliances, "Coffee Grinder", "Toaster", "Juicer")
+print(Appliances)
 
+Appliances += ("time", "linter")
+print(Appliances)
 #Create a new collection that contains the  unique color names in the list above
