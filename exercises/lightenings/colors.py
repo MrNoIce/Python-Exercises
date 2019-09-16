@@ -121,3 +121,33 @@ print(Appliances)
 Appliances += ("time", "linter")
 print(Appliances)
 #Create a new collection that contains the  unique color names in the list above
+
+
+def add(a,b):
+  return a+b
+
+def subtract(a,b):
+  return a-b
+
+def calculate(calc):
+  print("calc",calc(3,5))
+
+
+calculate(add)
+calculate(subtract)
+
+sub = subtract(11,2)
+time = add(2,3)
+
+print(sub)
+print(time)
+
+
+
+# 1. write a function called add that accepts two arguments and returns their sum
+# 1. write a function called subtract that accepts two arguments and returns the difference
+# 1. write a function called calculate that accepts a function as an argument.
+# In calculate's body, it should execute that function and pass it the numbers 3 and 5
+# 1. print an execution of calculate and pass it a reference to add
+# 1. print an execution of calculate and pass it a reference to subtract
+
